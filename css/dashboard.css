@@ -1,0 +1,151 @@
+/* Dashboard CSS for Mangrove Salinity Monitoring System */
+
+/* Global styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation bar styling */
+.navbar-brand img {
+    margin-right: 8px;
+}
+
+/* Card styling */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    background-color: rgba(0,0,0,.03);
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075) !important;
+}
+
+/* Stats cards */
+.card.bg-primary, .card.bg-success, .card.bg-info, .card.bg-warning {
+    transition: transform 0.3s ease;
+}
+
+.card.bg-primary:hover, .card.bg-success:hover, .card.bg-info:hover, .card.bg-warning:hover {
+    transform: translateY(-5px);
+}
+
+/* Table styling */
+.table th {
+    font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* Map styling */
+#salinity-map {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.leaflet-popup-content {
+    font-size: 14px;
+}
+
+.leaflet-popup-content h5 {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Mangrove species cards */
+.ideal-marker {
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+}
+
+/* Device and species modals */
+.modal-header {
+    background-color: var(--light-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Salinity range visualization */
+.salinity-range-wrapper {
+    margin-bottom: 1rem;
+}
+
+.progress {
+    height: 25px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Loading indicator */
+.loading-spinner {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: text-bottom;
+    border: 0.2em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border .75s linear infinite;
+}
+
+/* Custom marker colors for the map */
+.salinity-low {
+    background-color: #198754;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.salinity-medium {
+    background-color: #ffc107;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.salinity-high {
+    background-color: #dc3545;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Chart container */
+#salinity-chart {
+    width: 100%;
+    height: 300px;
+}

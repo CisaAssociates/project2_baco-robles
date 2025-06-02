@@ -1,0 +1,6 @@
+Please add your logo.png and favicon.ico files to this directory.
+
+For the logo, a recommended size is 200x50 pixels.
+For the favicon, a standard 16x16 or 32x32 pixel .ico file is recommended.
+
+You can use online tools to create these assets or hire a designer to create professional branding for your mangrove salinity monitoring system.

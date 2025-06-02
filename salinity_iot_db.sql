@@ -32,7 +32,7 @@ CREATE TABLE `arduino_data` (
   `device_id` varchar(50) NOT NULL,
   `raw_data` text NOT NULL,
   `received_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Dumping data for table `arduino_data`
@@ -71,7 +71,7 @@ CREATE TABLE `devices` (
   `last_seen` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Dumping data for table `devices`
@@ -93,7 +93,7 @@ CREATE TABLE `ec_sensor_data` (
   `salinity_ppt` float NOT NULL COMMENT 'Salinity in parts per thousand',
   `temperature` float NOT NULL COMMENT 'Temperature in Celsius',
   `reading_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Dumping data for table `ec_sensor_data`
@@ -131,7 +131,7 @@ CREATE TABLE `gps_data` (
   `altitude` float DEFAULT NULL,
   `accuracy` float DEFAULT NULL,
   `reading_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Dumping data for table `gps_data`
@@ -169,7 +169,7 @@ CREATE TABLE `mangrove_species` (
   `image_url` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Dumping data for table `mangrove_species`
@@ -197,7 +197,7 @@ CREATE TABLE `password_resets` (
   `token` varchar(64) NOT NULL,
   `expires_at` timestamp NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -212,7 +212,7 @@ CREATE TABLE `readings` (
   `gps_data_id` int NOT NULL,
   `reading_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `notes` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Dumping data for table `readings`
@@ -245,7 +245,7 @@ CREATE TABLE `recommendations` (
   `species_id` int NOT NULL,
   `confidence` float NOT NULL COMMENT 'Confidence score (0-1)',
   `recommendation_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -259,7 +259,7 @@ CREATE TABLE `rs485_data` (
   `message` text NOT NULL,
   `direction` enum('in','out') NOT NULL,
   `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -274,7 +274,7 @@ CREATE TABLE `settings` (
   `setting_value` text NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -288,7 +288,7 @@ CREATE TABLE `system_log` (
   `log_level` enum('info','warning','error','critical') NOT NULL,
   `message` text NOT NULL,
   `log_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Dumping data for table `system_log`
@@ -327,7 +327,7 @@ CREATE TABLE `users` (
   `last_login` timestamp NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Dumping data for table `users`

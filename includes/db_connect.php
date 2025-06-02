@@ -6,9 +6,9 @@
 
 // Database configuration
 $db_host = 'localhost';
-$db_name = 'salinity_iot_db';
-$db_user = 'root';     // Change to your MySQL username
-$db_pass = '';         // Change to your MySQL password
+$db_name = 'pj2_baro_db';
+$db_user = 'pj2_baro';     // Change to your MySQL username
+$db_pass = 'Project2_2025';         // Change to your MySQL password
 
 // Create database connection
 try {

@@ -6,8 +6,8 @@
 
 // Database configuration
 $db_host = 'localhost';
-$db_name = 'pj2_baro_db';
-$db_user = 'pj2_baro';     // Change to your MySQL username
+$db_name = 'u347279731_pj2_baro_db';
+$db_user = 'u347279731_pj2_baro';     // Change to your MySQL username
 $db_pass = 'Project2_2025';         // Change to your MySQL password
 
 // Create database connection
